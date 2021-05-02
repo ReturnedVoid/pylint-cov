@@ -2,17 +2,6 @@ import tempfile
 from pylint_cov import analyze
 
 
-# def test_get_pylint_output():
-#     with tempfile.NamedTemporaryFile(mode='w+') as tmp_file:
-#         tmp_file.write(
-#             '# pylint:disable=no-member,invalid-name\n\n\n'
-#             'def Main()\n'
-#             '    pass'
-#         )
-#         tmp_file.flush()
-#         assert False
-
-
 def test_get_useless_disables_empty_file_no_useless_disables():
     with tempfile.NamedTemporaryFile(mode='w+') as tmp_file:
         tmp_file.write('')
